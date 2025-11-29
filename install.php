@@ -29,8 +29,8 @@
     $stmt1= $conn->prepare("INSERT INTO tblusers
     (UserID,Username, Surname, Forename, Password, Year, Balance, Role)
     VALUES
-    (NULL,'Chan.A','Chan','Alex', :Password,'2008','1000000','1'),
-    (NULL,'Yeung.R','Yeung','Rico', :Password,'2008','100','0')
+    (NULL,'Chan.A','Chan','Alex', :Password,'2008','100.00','1'),
+    (NULL,'Yeung.R','Yeung','Rico', :Password,'2008','100.00','0')
     ");
     $stmt1->bindParam(":Password",$hashedpassword);
     $stmt1->execute();
@@ -44,15 +44,16 @@
     Price DECIMAL (15,2) NOT NULL);
     ");
     $stmt1->execute();
+    
     $stmt1=$conn->prepare("INSERT INTO tblfood 
     (FoodID,Name,Description,Category,Price)
     VALUES
-    (NULL,'Fries','Yellow potato strips' ,'Snack','5.00'),
-    (NULL,'Chocolate bar','Chocolate' ,'Snack','2.00'),
-    (NULL,'BLT','Bacon Lettuce Tomato' ,'Sandwich','3.40'),
-    (NULL,'Ham and cheese','Sandwich' ,'Sandwich','3.40'),
+    (NULL,'Coke','Coca Cola' ,'Drink','2.00'),
     (NULL,'Water','Pure water','Drink','0.00'),
-    (NULL,'Coke','Coca Cola' ,'Drink','2.00')
+    (NULL,'Ham and cheese','Sandwich' ,'Sandwich','3.40'),
+    (NULL,'BLT','Bacon Lettuce Tomato' ,'Sandwich','3.40'),
+    (NULL,'Chocolate bar','Chocolate' ,'Snack','2.00'),
+    (NULL,'Fries','Yellow potato strips' ,'Snack','5.00')
     ");
     
     $stmt1->execute();

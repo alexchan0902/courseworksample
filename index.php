@@ -22,6 +22,7 @@
   <h1>MainPage</h1>
   <a href="users.php">Add user</a><br>
   <a href="foods.php">Add food</a><br>
+  <a href="buyfood.php">Buy food</a><br>
   <a href="login.php">Login</a><br>
   <a href="logout.php">Logout</a>
 
